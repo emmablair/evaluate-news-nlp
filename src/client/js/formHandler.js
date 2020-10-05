@@ -1,8 +1,8 @@
 const baseURL = 'http://api.meaningcloud.com/sentiment-2.1='
-
+const apiKey = '';
 
 const handleSubmit = (e) => {
-    const apiKey = {};
+    
     // prevent submit default
     e.preventDefault()
 
@@ -11,9 +11,12 @@ const handleSubmit = (e) => {
 
     getKey()
     .then((data) => {
-        apiKey = data.key;
-        console.log(apiKey)
+        console.log(data);
+        // data.key = apiKey
+        // console.log(apiKey);
     })
+    // Object.assign(apiKey, key)
+    // console.log(apiKey)
 
     grabAPI(baseURL, userEntry, apiKey)
 }
