@@ -22,7 +22,17 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-            }
+            },
+            {
+                test: /\.(pg)$/,
+                use: [
+                  'file-loader',
+                ],
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
         ]
     },
     plugins: [
