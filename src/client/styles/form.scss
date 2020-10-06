@@ -1,7 +1,10 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
+    border: 1px;
+    border-radius: 1em;
     padding: 40px;
+    // background-color: rgb(13, 158, 255);
+    background-image: linear-gradient(to bottom right, #0064a7, #4dbbee);
+    // background-color: rgb(247, 214, 105);
 }
 
 input {
@@ -9,4 +12,30 @@ input {
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
 }
+
+#submit {
+    // background-image: linear-gradient(to bottom right, rgb(147, 212, 255), rgb(0, 109, 182));
+    border: none;
+    background-color: white;
+    border-radius: 3px;
+}
+
+#submit:active {
+    transform: translateY(3px);
+}
+
+#label {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: .7em;
+}
+
+// .bg {
+//     background-image: url('../images/bookFlower.jpg');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     height: 100vh;
+// }
