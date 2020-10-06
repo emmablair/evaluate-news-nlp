@@ -1,0 +1,49 @@
+#resultHead {
+    text-align: center;
+    font-size: 1.7em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: .1em;
+    padding: .3em
+}
+
+div {
+    h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3em;
+        padding: .7em;
+    }
+}
+
+#resultArea {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+#resultsOne, #resultsTwo, #resultsThree, #resultsFour {
+    text-align: center;
+    background-color: #2e98d1;
+    border-radius: .5em;
+    padding: 1em;
+}
+
+#agreement, #irony, #subjectivity, #confidence {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+ol {
+    font-family: 'Poppins', sans-serif;
+    padding: .5em;
+    margin: .3em;
+    text-align: center;
+}
+
+li {
+    font-family: 'Poppins', sans-serif;
+    padding: .3em;
+}
+#results {
+    display: none;
+}
