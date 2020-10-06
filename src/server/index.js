@@ -23,20 +23,6 @@ app.use(express.static('dist'))
 console.log(__dirname)
 
 
-
-// app.get('/meaningAPI/:userInput', async (req, res) => {
-//     const userInput = req.params.userInput
-//     console.log(userInput);
-//     const fetch_res = await fetch(`${baseURL}${apiKey}${settingsURL}&url=${userInput}`);
-//     const json = await fetch_res.json();
-//     res.json(json);
-// })
-
-// MeaningCloud API Key
-// app.get('/api', (req, res) => {
-//     res.send({key: process.env.API_KEY})
-// });
-
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
     // res.sendFile(path.resolve('dist/index.html'))
@@ -55,15 +41,10 @@ app.post('/input', async(req, res) => {
     const userInput = req.body.input;
     console.log(userInput)
 
-    const projectData = await fetch(`${baseURL}${apiKey}&of=json${settingsURL}&url=${userInput}`)
-    console.log(projectData)
-    const jsonData = await fetch(projectData.json())
-    .then(data => {
-        res.send(data)
-        console.log(data)
-        return data
-    })
-    .catch((error) => {
-        console.log("error", error);
-    });
+    const projectURL = (`${baseURL}${apiKey}${settingsURL}&url=${userInput}`)
+    console.log(projectURL)
+    const projectData = await fetch(projectURL)
+    .then(projectData => projectData.json())
+    .then(data => res.send(data))
+    .catch(error => console.log('ERROR in app.post', error));
 })
