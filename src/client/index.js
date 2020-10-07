@@ -9,6 +9,11 @@ import './styles/form.scss';
 import './styles/header.scss';
 import './styles/results.scss';
 
+import './images/agreement.png';
+import './images/irony.png';
+import './images/subjectivity.png';
+import './images/confidence.png';
+
 alert("Hello, world!")
 console.log("Hello, world!");
 
