@@ -23,14 +23,15 @@ div {
 
 #resultsOne, #resultsTwo, #resultsThree, #resultsFour {
     text-align: center;
-    background-color: #2e98d1;
-    border-radius: .5em;
+    // background-color: #2e98d1;
+    // border-radius: .5em;
     padding: 1em;
 }
 
 #agreement, #irony, #subjectivity, #confidence {
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: black;
+    padding: 1em;
 }
 
 ol {
