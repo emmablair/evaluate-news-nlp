@@ -5,7 +5,12 @@ async function handleSubmit(e) {
 
     // const userEntry = document.querySelector('#entry').value;
     console.log("::: Form Submitted :::");
-
+    // display results pending msg
+    document.querySelector('#label').style.opacity = '1';
+    document.querySelector('#label').style.visibility = 'visible';
+    // change cursors after submit
+    document.querySelector('.bg').style.cursor = 'wait';
+    document.querySelector('#submit').style.cursor = 'wait';
     // grabAPI(baseURL, userEntry, apiKey)
     const userInput = document.querySelector('#entry').value;
     const response = await fetch('/input', {
