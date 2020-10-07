@@ -1,5 +1,16 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+    text-align: center;
+    padding: 2em;
+    padding-bottom: 0;
+    font-family: 'Miriam Libre', sans-serif;
+    justify-self: center;
+    align-self: center;
+    h1{
+        font-size: 3em;
+        font-weight: 700;
+    }
+    h2 {
+        padding-top: 1em;
+        font-family: 'Miriam Libre', sans-serif;
+    }
 }
