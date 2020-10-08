@@ -5,6 +5,9 @@ async function handleSubmit(e) {
 
     // const userEntry = document.querySelector('#entry').value;
     console.log("::: Form Submitted :::");
+    // hide previous results after each submit
+    document.querySelector('#results').style.visibility = 'hidden';
+    document.querySelector('#results').style.opacity = '0';
     // display results pending msg
     document.querySelector('#label').style.opacity = '1';
     document.querySelector('#label').style.visibility = 'visible';
