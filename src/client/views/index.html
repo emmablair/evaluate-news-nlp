@@ -23,16 +23,16 @@
                     <li>STEP 2 : Enter the full web address into the form and submit!</li>
                 </ol>
                 <!-- <div id='label'>*This may take a moment, please wait while your results process!</div> -->
-                <form class="" onsubmit="return Client.handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleSubmit(event); Client.handleSummary(event)">
                     <input id="entry" type="text" name="input" value="" placeholder="Website URL">
-                    <input id="submit" type="submit" name="" value="Submit Article" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input id="submit" type="submit" name="" value="Submit Article" onclick="return Client.handleSubmit(event); Client.handleSummary(event)" onsubmit="return Client.handleSubmit(event); Client.handleSummary(event)">
                 </form>
                 <div id='label'>Submitted! Please wait while your results process!</div>
             <section>
 
             <section>
                 <div id='results'>
-                <!-- <div id='resultHead'><strong>Your NLP Results</strong></div> -->
+                <div id='sentiHeading'><h2>Hurray! Your results are ready!</h2></div>
                     <div id='resultArea'>
                         <div id="resultsOne">
                             <img src='../images/agreement.png' alt='Agreement icon: X mark verse check mark'>
@@ -50,6 +50,10 @@
                             <img src='../images/confidence.png' alt='Confidence icon: Thumbs up.'>
                             <div id='confidence'></div>
                         </div>
+                    </div>
+                    <div id='resultsSummary'>
+                        <div id='sumHeading'><h2>Article Summary</h2></div>
+                        <div id='summary'></div>
                     </div>
                 </div>
             </section>
