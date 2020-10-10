@@ -1,5 +1,6 @@
 const onSubmit = () => {
     // hide previous results after each submit
+    document.querySelector('#results').style.maxHeight = '0';
     document.querySelector('#results').style.visibility = 'hidden';
     document.querySelector('#results').style.opacity = '0';
     // display results pending msg
