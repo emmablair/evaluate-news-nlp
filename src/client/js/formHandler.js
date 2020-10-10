@@ -5,7 +5,7 @@ async function handleSubmit(e) {
     const userInput = document.querySelector('#entry').value;
     const valid = Client.urlChecker(userInput);
     if(!valid) {
-        alert('HELP');
+        return
     }else{
         console.log("::: Form Submitted: SENTIMENT :::");
 
