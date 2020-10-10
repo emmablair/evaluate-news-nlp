@@ -4,10 +4,10 @@ const urlChecker = (userInput) => {
     if (validURL == null) {
         console.log('Invalid URL!')
         alert('Please input a valid URL.');
-        return 0;
+        return false;
     }else{
         console.log('Valid URL!')
-        return 1;
+        return true;
     }
 }
 
