@@ -48,3 +48,19 @@ app.post('/input', async(req, res) => {
     .then(data => res.send(data))
     .catch(error => console.log('ERROR in app.post', error));
 })
+
+app.post('/summary', async(req, res) => {
+    const baseURL = 'https://api.meaningcloud.com/summarization-1.0?';
+    const apiKey = `key=${process.env.API_KEY}`;
+    const settingsURL = `&sentences=5`;
+    // get get input
+    const userInput = req.body.input;
+    console.log(userInput)
+
+    const projectURL = (`${baseURL}${apiKey}${settingsURL}&url=${userInput}`)
+    console.log(projectURL)
+    const projectData = await fetch(projectURL)
+    .then(projectData => projectData.json())
+    .then(data => res.send(data))
+    .catch(error => console.log('ERROR in app.post', error));
+})
