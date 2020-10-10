@@ -1,16 +1,19 @@
 header {
     text-align: center;
     padding: 2em;
-    padding-bottom: 0;
+    // padding-bottom: 0;
     font-family: 'Miriam Libre', sans-serif;
     justify-self: center;
     align-self: center;
     h1{
-        font-size: 3em;
+        font-family: 'Lobster', cursive;
+        font-size: 5em;
         font-weight: 700;
+        transform: rotate(-4deg);
     }
     h2 {
-        padding-top: 1em;
+        // padding-top: 1em;
         font-family: 'Miriam Libre', sans-serif;
+        transform: rotate(-4deg);
     }
 }
