@@ -1,35 +1,41 @@
 async function handleSubmit(e) {
 
-    // prevent submit default
+    // prevent submit default action
     e.preventDefault()
-
-    // const userEntry = document.querySelector('#entry').value;
-    console.log("::: Form Submitted: SENTIMENT :::");
-    // do this on submition
-    Client.onSubmit();
-    document.querySelector('#results').style.maxHeight = '0';
-    // grabAPI(baseURL, userEntry, apiKey)
     const userInput = document.querySelector('#entry').value;
-    const response = await fetch('/input',  {
-        method: 'POST',
-        credentials: 'same-origin',
-        mode: 'cors',
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ input: userInput })
-    })
-    .then(res => {
-        const postData = res.json();
-        return postData;
-    })
-    .catch((error) => {
-        console.log('HANDLE SUBMIT promise error', error);
-    });
-    console.log(response);
-    document.querySelector('#results').style.maxHeight = 'none';
-    handleSummary(e);
-    Client.updateUI(response);
+    const valid = Client.urlChecker(userInput);
+    if(!valid) {
+        alert('HELP');
+    }else{
+        console.log("::: Form Submitted: SENTIMENT :::");
+
+        // do this on submition
+        Client.onSubmit();
+        
+        // user input
+        // const userInput = document.querySelector('#entry').value;
+
+        // API call
+        const response = await fetch('/input',  {
+            method: 'POST',
+            credentials: 'same-origin',
+            mode: 'cors',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ input: userInput })
+        })
+        .then(res => {
+            const postData = res.json();
+            return postData;
+        })
+        .catch((error) => {
+            console.log('HANDLE SUBMIT promise error', error);
+        });
+        console.log(response);
+        handleSummary(e);
+        Client.updateUI(response);
+    }
 }
 
 // Summary API call
