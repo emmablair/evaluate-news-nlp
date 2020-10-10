@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Description](#Description)
-* [Project Goal](#Project)
+* [Project Goal](#Project-Goal)
 * [Languages](#Languages)
 * [Features](#Features)
 
