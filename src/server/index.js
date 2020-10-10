@@ -44,7 +44,7 @@ app.post('/input', async(req, res) => {
     const projectData = await fetch(projectURL)
     .then(projectData => projectData.json())
     .then(data => res.send(data))
-    .catch(error => console.log('ERROR in app.post', error));
+    .catch(error => console.log('ERROR in app.post /input', error));
 })
 
 app.post('/summary', async(req, res) => {
@@ -60,5 +60,5 @@ app.post('/summary', async(req, res) => {
     const projectData = await fetch(projectURL)
     .then(projectData => projectData.json())
     .then(data => res.send(data))
-    .catch(error => console.log('ERROR in app.post', error));
+    .catch(error => console.log('ERROR in app.post /summary', error));
 })
