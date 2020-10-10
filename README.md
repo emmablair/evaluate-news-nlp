@@ -34,3 +34,4 @@ Javascipt focused project for [Udacity's](https://www.udacity.com/) Front End pr
 * URL Checker
 * Service Workers
 * Dynamic update results
+* Jest testing
