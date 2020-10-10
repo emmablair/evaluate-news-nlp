@@ -2,6 +2,7 @@ import { handleSubmit } from './js/formHandler';
 import { updateUI } from './js/updateUI';
 import { updateSummary } from './js/updateUI';
 import { onSubmit } from './js/onSubmit';
+import { urlChecker } from './js/urlChecker';
 
 import './styles/resets.scss';
 import './styles/base.scss';
@@ -22,5 +23,6 @@ export {
     handleSubmit,
     updateUI,
     onSubmit,
-    updateSummary
+    updateSummary,
+    urlChecker
 }
