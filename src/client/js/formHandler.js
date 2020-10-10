@@ -4,19 +4,13 @@ async function handleSubmit(e) {
     e.preventDefault()
 
     // const userEntry = document.querySelector('#entry').value;
-    console.log("::: Form Submitted :::");
-    // hide previous results after each submit
-    document.querySelector('#results').style.visibility = 'hidden';
-    document.querySelector('#results').style.opacity = '0';
-    // display results pending msg
-    document.querySelector('#label').style.opacity = '1';
-    document.querySelector('#label').style.visibility = 'visible';
-    // change cursors after submit
-    document.querySelector('.bg').style.cursor = 'wait';
-    document.querySelector('#submit').style.cursor = 'wait';
+    console.log("::: Form Submitted: SENTIMENT :::");
+    // do this on submition
+    Client.onSubmit();
+    document.querySelector('#results').style.maxHeight = '0'; //MUST WORK ON THIS TRANSITION HERE!!!
     // grabAPI(baseURL, userEntry, apiKey)
     const userInput = document.querySelector('#entry').value;
-    const response = await fetch('/input', {
+    const response = await fetch('/input',  {
         method: 'POST',
         credentials: 'same-origin',
         mode: 'cors',
@@ -30,10 +24,44 @@ async function handleSubmit(e) {
         return postData;
     })
     .catch((error) => {
-        console.log('promise error', error);
+        console.log('HANDLE SUBMIT promise error', error);
     });
     console.log(response);
+    document.querySelector('#results').style.maxHeight = 'none';
+    handleSummary(e);
     Client.updateUI(response);
 }
 
+async function handleSummary(e) {
+
+    // prevent submit default
+    // e.preventDefault()
+
+    // const userEntry = document.querySelector('#entry').value;
+    console.log("::: Form Submitted: SUMMARY :::");
+    // do this on submition
+    // Client.onSubmit();
+    // grabAPI(baseURL, userEntry, apiKey)
+    const userInput = document.querySelector('#entry').value;
+    const response = await fetch('/summary',  {
+        method: 'POST',
+        credentials: 'same-origin',
+        mode: 'cors',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ input: userInput })
+    })
+    .then(res => {
+        const postData = res.json();
+        return postData;
+    })
+    .catch((error) => {
+        console.log('HANDLE SUMMARY promise error', error);
+    });
+    console.log(response);
+    Client.updateSummary(response);
+}
+
+// export { handleSummary }
 export { handleSubmit }
