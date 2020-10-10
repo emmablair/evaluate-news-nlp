@@ -4,7 +4,6 @@ dotenv.config();
 
 var path = require('path');
 const express = require('express');
-const mockAPIResponse = require('./mockAPI.js');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
