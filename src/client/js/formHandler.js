@@ -2,7 +2,9 @@ async function handleSubmit(e) {
 
     // prevent submit default action
     e.preventDefault()
+    // user input
     const userInput = document.querySelector('#entry').value;
+    // Check URL Validity
     const valid = Client.urlChecker(userInput);
     if(!valid) {
         return
@@ -11,9 +13,6 @@ async function handleSubmit(e) {
 
         // do this on submition
         Client.onSubmit();
-        
-        // user input
-        // const userInput = document.querySelector('#entry').value;
 
         // API call
         const response = await fetch('/input',  {
