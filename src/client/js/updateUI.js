@@ -13,4 +13,9 @@ const updateUI = (data) => {
     document.querySelector('#results').style.opacity = '1';
 };
 
+const updateSummary = (data) => {
+    document.querySelector('#summary').innerHTML = `${data.summary}`;
+}
+
 export { updateUI }
+export { updateSummary }
