@@ -1,6 +1,4 @@
-// import { checkForName } from './js/nameChecker';
 import { handleSubmit } from './js/formHandler';
-// import { handleSummary } from './js/formHandler';
 import { updateUI } from './js/updateUI';
 import { updateSummary } from './js/updateUI';
 import { onSubmit } from './js/onSubmit';
@@ -24,6 +22,5 @@ export {
     handleSubmit,
     updateUI,
     onSubmit,
-    // handleSummary,
     updateSummary
 }

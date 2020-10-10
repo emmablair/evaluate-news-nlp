@@ -7,7 +7,7 @@ async function handleSubmit(e) {
     console.log("::: Form Submitted: SENTIMENT :::");
     // do this on submition
     Client.onSubmit();
-    document.querySelector('#results').style.maxHeight = '0'; //MUST WORK ON THIS TRANSITION HERE!!!
+    document.querySelector('#results').style.maxHeight = '0';
     // grabAPI(baseURL, userEntry, apiKey)
     const userInput = document.querySelector('#entry').value;
     const response = await fetch('/input',  {
