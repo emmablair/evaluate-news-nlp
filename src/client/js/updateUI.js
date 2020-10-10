@@ -9,6 +9,7 @@ const updateUI = (data) => {
     // remove pending msg & ADD display results
     document.querySelector('#label').style.visibility = 'hidden';
     document.querySelector('#label').style.opacity = '0';
+    document.querySelector('#results').style.maxHeight = 'none';
     document.querySelector('#results').style.visibility = 'visible';
     document.querySelector('#results').style.opacity = '1';
 };
