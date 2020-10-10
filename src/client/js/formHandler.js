@@ -32,16 +32,11 @@ async function handleSubmit(e) {
     Client.updateUI(response);
 }
 
+// Summary API call
 async function handleSummary(e) {
 
-    // prevent submit default
-    // e.preventDefault()
-
-    // const userEntry = document.querySelector('#entry').value;
     console.log("::: Form Submitted: SUMMARY :::");
-    // do this on submition
-    // Client.onSubmit();
-    // grabAPI(baseURL, userEntry, apiKey)
+
     const userInput = document.querySelector('#entry').value;
     const response = await fetch('/summary',  {
         method: 'POST',
@@ -63,5 +58,4 @@ async function handleSummary(e) {
     Client.updateSummary(response);
 }
 
-// export { handleSummary }
 export { handleSubmit }
